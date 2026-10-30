@@ -526,6 +526,105 @@
           }
         ]
       }
+    },
+    {
+      "description": "Create position paid in native token - chain 1",
+      "rawTx": "0x02f902d80108830186a084031d6c268307971c94c36442b4a4522e871399cd717abdd847ab11fe888809789a94d790ca76b90264ac9650d800000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001e0000000000000000000000000000000000000000000000000000000000000016488316456000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec70000000000000000000000000000000000000000000000000000000000000064fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcef87fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf8a800000000000000000000000000000000000000000000000009789a94d790ca7600000000000000000000000000000000000000000000000000000001f9dc516c00000000000000000000000000000000000000000000000002dbe465ead8580f00000000000000000000000000000000000000000000000000000001b66c6b4c000000000000000000000000d45c19e3efb7f34d725c561ded1d060f468d85ef000000000000000000000000000000000000000000000000000000006ae0973200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000412210e8a00000000000000000000000000000000000000000000000000000000c080a08bb61e7f1390568b12ff4586c0daa6caef278c2f4352099a5812f09279dc0a5ba01c51ac9ab1c5ff85c796d46e5bac2d1cf40ca5ff593bc38e6b2958e605db8964",
+      "from": "0xd45C19e3EFB7F34D725c561ded1D060f468D85Ef",
+      "expected": {
+        "intent": "Batch position actions",
+        "interpolatedIntent": "Send 0.68246530760905791 ETH and run every action below in one transaction; if one action fails, the whole transaction reverts",
+        "owner": "Uniswap Labs",
+        "fields": [
+          { "label": "Native Value Sent", "value": "0.68246530760905791 ETH" },
+          {
+            "label": "Action",
+            "value": {
+              "intent": "Open liquidity position",
+              "fields": [
+                { "label": "Maximum to Add", "value": "0.68246530760905791 WETH" },
+                { "label": "Maximum to Add", "value": "8486.932844 USDT" },
+                { "label": "Minimum to Add", "value": "0.206009334358366223 WETH" },
+                { "label": "Minimum to Add", "value": "7355.525964 USDT" },
+                { "label": "Transaction Value", "value": "0.68246530760905791 ETH" },
+                { "label": "Pool Fee", "value": "0.01%" },
+                { "label": "Position Recipient", "value": "0xd45C19e3EFB7F34D725c561ded1D060f468D85Ef" },
+                { "label": "Deadline", "value": "2026-10-27 12:21:06Z" },
+                { "label": "Lower Tick", "value": "-200825" },
+                { "label": "Upper Tick", "value": "-198488" }
+              ],
+              "interpolatedIntent": "Add up to 0.68246530760905791 WETH and up to 8486.932844 USDT to a new position for 0xd45C19e3EFB7F34D725c561ded1D060f468D85Ef",
+              "owner": "Uniswap Labs"
+            }
+          },
+          {
+            "label": "Action",
+            "value": {
+              "intent": "Refund leftover native token",
+              "fields": [{ "label": "Transaction Value", "value": "0.68246530760905791 ETH" }],
+              "interpolatedIntent": "Send the native token held by this contract to you",
+              "owner": "Uniswap Labs"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "description": "Add liquidity to WPOL/USDC position paid in POL - chain 137",
+      "rawTx": "0x02f8f981892c8506fc23ac008514f46b04008306ddd094c36442b4a4522e871399cd717abdd847ab11fe888901158e460913d00000b8c4219f5d1700000000000000000000000000000000000000000000000000000000002569be000000000000000000000000000000000000000000000001158e460913d0000000000000000000000000000000000000000000000000000000000000004c4b40000000000000000000000000000000000000000000000001142b0090b646000000000000000000000000000000000000000000000000000000000000004be998000000000000000000000000000000000000000000000000000000006abd8660c0",
+      "expected": {
+        "intent": "Add to liquidity position",
+        "interpolatedIntent": "Add up to 20000000000000000000 token0 and up to 5000000 token1 (raw units) to position Uniswap V3 Positions NFT-V1 #2451902",
+        "owner": "Uniswap Labs",
+        "fields": [
+          { "label": "Position", "value": "Uniswap V3 Positions NFT-V1 #2451902" },
+          { "label": "Max Token0 (raw)", "value": "20000000000000000000" },
+          { "label": "Max Token1 (raw)", "value": "5000000" },
+          { "label": "Min Token0 (raw)", "value": "19900000000000000000" },
+          { "label": "Min Token1 (raw)", "value": "4975000" },
+          { "label": "Transaction Value", "value": "20 POL" },
+          { "label": "Deadline", "value": "2026-09-30 22:00:00Z" }
+        ]
+      }
+    },
+    {
+      "description": "Add liquidity paid in native token - chain 8453",
+      "rawTx": "0x02f9023a82210582047e831312d083aba9508304322e9403a520b32c04bf3beef7beb72e919cf822ed34f1875de0b32f38aa39b901c4ac9650d8000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000c4219f5d170000000000000000000000000000000000000000000000000000000000544690000000000000000000000000000000000000000000000000005de0b32f38aa3900000000000000000000000000000000000000000000000000000000033aab20000000000000000000000000000000000000000000000000005710d34516de8f0000000000000000000000000000000000000000000000000000000002f43b20000000000000000000000000000000000000000000000000000000006ae0e5b600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000412210e8a00000000000000000000000000000000000000000000000000000000c080a06d50ee240ec7092a6da494628c7c6d07638a0e18ed6d7c2c6a62975ccc71648fa07959a45136fa5e743a50a13d76aa20902eb65163d2df87a3a7d157c405a639b5",
+      "from": "0x61E438A86b1dE6A2337B0088a8a3290f066D53F6",
+      "expected": {
+        "intent": "Batch position actions",
+        "interpolatedIntent": "Send 0.026424233030101561 ETH and run every action below in one transaction; if one action fails, the whole transaction reverts",
+        "owner": "Uniswap Labs",
+        "fields": [
+          { "label": "Native Value Sent", "value": "0.026424233030101561 ETH" },
+          {
+            "label": "Action",
+            "value": {
+              "intent": "Add to liquidity position",
+              "fields": [
+                { "label": "Position", "value": "Uniswap V3 Positions NFT-V1 #5523088" },
+                { "label": "Max Token0 (raw)", "value": "26424233030101561" },
+                { "label": "Max Token1 (raw)", "value": "54176544" },
+                { "label": "Min Token0 (raw)", "value": "24506822557097615" },
+                { "label": "Min Token1 (raw)", "value": "49560352" },
+                { "label": "Transaction Value", "value": "0.026424233030101561 ETH" },
+                { "label": "Deadline", "value": "2026-10-27 17:56:06Z" }
+              ],
+              "interpolatedIntent": "Add up to 26424233030101561 token0 and up to 54176544 token1 (raw units) to position Uniswap V3 Positions NFT-V1 #5523088",
+              "owner": "Uniswap Labs"
+            }
+          },
+          {
+            "label": "Action",
+            "value": {
+              "intent": "Refund leftover native token",
+              "fields": [{ "label": "Transaction Value", "value": "0.026424233030101561 ETH" }],
+              "interpolatedIntent": "Send the native token held by this contract to you",
+              "owner": "Uniswap Labs"
+            }
+          }
+        ]
+      }
     }
   ]
 }
